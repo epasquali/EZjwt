@@ -6,7 +6,18 @@ The following functionality is included:
 
 ### Models:
 
-A user model which includes username and password only
+A user model which includes username and password only, with the following barebones schema:
+
+```ruby
+ActiveRecord::Schema[8.0].define(version: 2024_12_21_165111) do
+  create_table "ez_jwt_users", force: :cascade do |t|
+    t.string "email"
+    t.string "password_digest"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+end
+```
 
 ### Controllers:
 
