@@ -1,3 +1,3 @@
 Rails.application.routes.draw do
-  mount EzJwt::Engine => "/ez_jwt"
+  mount EzJwt::Engine => "/"
 end
