@@ -1,14 +1,44 @@
 source "https://rubygems.org"
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-# Specify your gem's dependencies in ez_jwt.gemspec.
-gemspec
+ruby '~> 3.3.6'
 
+# Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
+gem "rails", "~> 8.0.1"
+
+
+# Use the Puma web server [https://github.com/puma/puma]
 gem "puma"
 
-gem "sqlite3"
+# Use Active Model has_secure_password [https://guides.rubyonrails.org/active_model_basics.html#securepassword]
+gem "bcrypt"
 
-gem "sprockets-rails"
+# Other Stuff
+gem 'jwt'
 
-# Start debugger with binding.b [https://github.com/ruby/debug]
-# gem "debug", ">= 1.0.0"
+group :development, :test do
+  # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
+  gem "debug", platforms: %i[ mri mingw x64_mingw ]
+  gem "byebug"
+  gem 'sqlite3'
+end
+
+group :development do
+  # Speed up commands on slow machines / big apps [https://github.com/rails/spring]
+  # gem "spring"
+  gem 'haml-rails'
+  gem 'html2haml'
+end
+
+
+group :test do
+  gem "minitest-reporters"
+end
+
+group :production do
+  gem 'pg'
+end
+
+
+
+

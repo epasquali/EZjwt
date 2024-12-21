@@ -5,7 +5,7 @@ Gem::Specification.new do |spec|
   spec.version     = EzJwt::VERSION
   spec.authors     = ["Elisa Pasquali"]
   spec.email       = ["epasquali@hotmail.com"]
-  spec.homepage    = "TODO"
+  spec.homepage    = "http://github.com/epasquali/ez_jwt"
   spec.summary     = "Implements simple JWT authentication for Rails APIs."
   spec.description = "Implements simple JWT authentication for Rails APIs."
   spec.license     = "MIT"
@@ -15,8 +15,8 @@ Gem::Specification.new do |spec|
   spec.metadata["allowed_push_host"] = "TODO: Set to 'http://mygemserver.com'"
 
   spec.metadata["homepage_uri"] = spec.homepage
-  spec.metadata["source_code_uri"] = "TODO: Put your gem's public repo URL here."
-  spec.metadata["changelog_uri"] = "TODO: Put your gem's CHANGELOG.md URL here."
+  spec.metadata["source_code_uri"] = "http://github.com/epasquali/ez_jwt."
+  spec.metadata["changelog_uri"] = "http://github.com/epasquali/ez_jwt."
 
   spec.files = Dir.chdir(File.expand_path(__dir__)) do
     Dir["{app,config,db,lib}/**/*", "MIT-LICENSE", "Rakefile", "README.md"]
