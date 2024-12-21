@@ -23,14 +23,6 @@ group :development, :test do
   gem 'sqlite3'
 end
 
-group :development do
-  # Speed up commands on slow machines / big apps [https://github.com/rails/spring]
-  # gem "spring"
-  gem 'haml-rails'
-  gem 'html2haml'
-end
-
-
 group :test do
   gem "minitest-reporters"
 end
