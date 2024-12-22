@@ -21,8 +21,13 @@ end
 
 ### Controllers:
 
-login \
-logout
+#### Users Controller
+
+index, show, create, and update users
+
+#### Authentication Controller
+
+Provides login route to issue JWT token to authenticated users.
 
 ### Concerns:
 

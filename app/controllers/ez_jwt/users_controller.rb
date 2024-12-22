@@ -1,6 +1,7 @@
 module EzJwt
 
   class UsersController < ApplicationController 
+    include EzJwt::Authorization
 
     before_action :authorize_request, except: [:create, :password_reset]
   
@@ -23,7 +24,7 @@ module EzJwt
       @user = User.new(user_params)
       if @user.save
       # AdminNotificationsMailer.new_user(@user).deliver_now
-        render json: @user, include: :profile, status: :created
+        render json: @user, status: :created
       else
         render json: {errors: @user.errors.full_messages}, status: :unprocessable_entity
       end

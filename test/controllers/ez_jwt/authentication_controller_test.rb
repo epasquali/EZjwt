@@ -3,7 +3,6 @@ require "test_helper"
 module EzJwt
 
   class AuthenticationControllerTest < ActionDispatch::IntegrationTest
-    include Engine.routes.url_helpers
   
     setup do
       #Clear all existing users because user must be unique on email create
