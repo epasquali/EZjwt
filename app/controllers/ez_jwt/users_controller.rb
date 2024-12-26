@@ -3,7 +3,8 @@ module EzJwt
   class UsersController < ApplicationController 
     include EzJwt::Authorization
 
-    before_action :authorize_request, except: [:create, :password_reset]
+    #before_action :authorize_request, except: [:create, :password_reset]
+    before_action :authorize_request, except: [:create]
   
 
     # GET /users
