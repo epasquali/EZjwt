@@ -1,0 +1,12 @@
+en:
+  activerecord:
+    attributes:
+      ez_jwt/user:
+        email: "Email"
+        password: "Password"
+    errors:
+      messages:
+        required: "does not exist"
+        inuse: "is already in use"
+        badpwd: "must have a mix of upper and lowercase letters,
+          contain numbers and symbols, and be at least 8 characters long"
