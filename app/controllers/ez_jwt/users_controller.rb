@@ -10,13 +10,13 @@ module EzJwt
     # GET /users
     def index
       @users = User.all
-      render json: @users, status: :ok
+      render json: @users, except: [:password_digest], status: :ok
     end
 
 
     # GET /user
     def show
-      render json: @current_user, status: :ok
+      render json: @current_user, except: [:password_digest], status: :ok
     end
 
 
@@ -25,7 +25,7 @@ module EzJwt
       @user = User.new(user_params)
       if @user.save
       # AdminNotificationsMailer.new_user(@user).deliver_now
-        render json: @user, status: :created
+        render json: @user, except: [:password_digest], status: :created
       else
         render json: {errors: @user.errors.full_messages}, status: :unprocessable_entity
       end
@@ -36,7 +36,7 @@ module EzJwt
     # PATCH/PUT /user
     def update
       if @current_user.update(user_params)
-        render json: @current_user, status: :ok
+        render json: @current_user, except: [:password_digest], status: :ok
       else
         render json: {errors: @current_user.errors.full_messages}, status: :unprocessable_entity
       end
