@@ -19,6 +19,14 @@ ActiveRecord::Schema[8.0].define(version: 2024_12_21_165111) do
 end
 ```
 
+The password validation requires a password that is
+
+- Minimum 8 characters
+- At least 1 number
+- At least 1 lowercase letter
+- At least 1 uppercase letter
+- At least one symbol
+
 ### Controllers:
 
 #### Users Controller
