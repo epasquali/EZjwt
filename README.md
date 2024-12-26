@@ -71,7 +71,7 @@ Now mount the engine by adding this line to your routes.rb file:
 mount EzJwt::Engine => '/'
 ```
 
-You should be able to see basic controller routes by navigating, for instance, to localhost:3000/auth/login or localhost:3000/user/register
+You should be able to see basic controller routes by navigating, for instance, to localhost:3000/users (GET) or localhost:3000/auth/login or localhost:3000/user/register (POST).
 
 Since ez_jwt creates a basic user model with email and password, you need to run the migrations in your app. Simply run:
 
