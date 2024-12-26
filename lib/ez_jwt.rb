@@ -1,5 +1,6 @@
 require "ez_jwt/version"
 require "ez_jwt/engine"
+require 'jwt'
 
 module EzJwt
 
