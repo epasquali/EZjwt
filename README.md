@@ -50,7 +50,7 @@ Similarly, the default secret key for encoding JWT tokens is set by default to R
 Add this line to your application's Gemfile:
 
 ```ruby
-gem "ez_jwt"
+gem 'ez_jwt', git: 'git@github.com:epasquali/ez_jwt.git'
 ```
 
 And then execute:
@@ -64,6 +64,14 @@ Or install it yourself as:
 ```bash
 $ gem install ez_jwt
 ```
+
+Now mount the engine by adding this line to your routes.rb file:
+
+```ruby
+mount EzJwt::Engine => '/'
+```
+
+You should be able to see basic controller routes by navigating, for instance, to localhost:3000/auth/login or localhost:3000/user/register
 
 Since ez_jwt creates a basic user model with email and password, you need to run the migrations in your app. Simply run:
 
