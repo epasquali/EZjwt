@@ -1,4 +1,4 @@
-# EzJwt
+# EZJwt
 
 Simple Rails engine that implements JWT authentication for a Rails API.
 
